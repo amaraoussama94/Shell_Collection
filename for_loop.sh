@@ -2,7 +2,7 @@
 
 NAMES=$@ # create an array 
 
-for NAME in $NAMES
+for NAME in $NAMES ##lopping  through everyy element in the array
 do
-    echo $NAME
+    echo "hello $NAME"
 done
