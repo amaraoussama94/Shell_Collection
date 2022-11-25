@@ -1,7 +1,7 @@
 #!/usr/bin/env bash 
 
 COUNT=1
-while IFS='' read -r LINE # -r to escape the \n line var that hold current line of text
+while IFS='' read -r LINE # -r do not allow \ to escape any caractere
 do
     echo "line $COUNT : $LINE"
     ((COUNT++))
