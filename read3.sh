@@ -8,11 +8,12 @@ COUNT=1
 while IFS='' read -r LINE
 do
     echo " $COUNT : $LINE"
-    ((COUNT++))
+   
     if [ $COUNT -eq 4 ]
     then
         break
     fi
+    ((COUNT++))
 done < "$1"
 #echo " end of  script "
 exit 0
