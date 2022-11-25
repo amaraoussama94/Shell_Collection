@@ -1,0 +1,9 @@
+line 1 : #!/usr/bin/env bash 
+line 2 : 
+line 3 : COUNT=1
+line 4 : while IFS='' read -r LINE # -r do not allow \ to escape any caractere
+line 5 : do
+line 6 :     echo "line $COUNT : $LINE"
+line 7 :     ((COUNT++))
+line 8 : done < "$1" #use redirection so we  can use the passed file as input 
+line 9 : exit 0
