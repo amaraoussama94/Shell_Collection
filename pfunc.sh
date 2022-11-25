@@ -10,7 +10,7 @@ GetFiles()
 ShowFiles()
 {
     local COUNT=1
-    for FILE in $FILES
+    for FILE in $@ #$FILES
     do 
         echo "#$COUNT = $FILE"
         ((COUNT++))
@@ -20,4 +20,4 @@ ShowFiles()
 #call function 1
 GetFiles
 #call function 2
-ShowFiles
+ShowFiles $FILES
