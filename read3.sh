@@ -9,7 +9,7 @@ while IFS='' read -r LINE
 do
     echo " $COUNT : $LINE"
    
-    if [ $COUNT -eq 4 ]
+    if [ $COUNT -eq 3 ]
     then
         break
     fi
