@@ -2,7 +2,7 @@
 
 VALID=0
 
-while [ $VALID -eq 0]
+while [ $VALID -eq 0 ]
 do
     read -p " Please enter your name and age: " NAME AGE
     if [[[ -z $NAME  ] ||   [ -z $AGE  ]]]
