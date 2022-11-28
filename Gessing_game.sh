@@ -1,5 +1,6 @@
 
 #Global  Variable
+
 COMPUTER=20
 WIN=0
 
@@ -8,16 +9,20 @@ while [ $WIN -eq 0 ]
 do
     read -p "Guess the number its between 1 and 50 : " GUESS
 
-    #if [ -z $GUESS ]
-    #then 
-    #    echo " please  enter your Guess" 
-    #    continue
-    #fi
+    if [ -z $GUESS ] # checking  for  emptty var 
+    then 
+        echo " please  enter your Guess" 
+        continue
+    elif [[ ! $GUESS =~ ^[0-9]+$ ]  ]# checking if the guess is a digit or no 
+        echo "Non digit charactere detected [$GUESS]"
+        continue
 
-    if [   $GUESS -eq $COMPUTER ]
+    #Start checking if guess eq or less or greater then the var
+
+    elif [   $GUESS -eq $COMPUTER ]
     then 
         echo "  you Guess it "
-        WIN=1
+        WIN=1  # stop the  loop
         exit 0
     elif  [  $GUESS -lt $COMPUTER ]
     then
