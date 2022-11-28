@@ -1,9 +1,9 @@
 
 #Global  Variable
 
-COMPUTER=20
+COMPUTER=$[ $RANDOM % 50 + 1 ] #generate  random number [1..50]
 WIN=0
-
+#echo $COMPUTER
 
 while [ $WIN -eq 0 ]
 do
@@ -13,7 +13,8 @@ do
     then 
         echo " please  enter your Guess" 
         continue
-    elif [[ ! $GUESS =~ ^[0-9]+$ ]  ]# checking if the guess is a digit or no 
+    elif [[ ! $GUESS =~ ^[0-9]+$ ]] # checking if the guess is a digit or no 
+    then
         echo "Non digit charactere detected [$GUESS]"
         continue
 
