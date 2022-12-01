@@ -4,4 +4,11 @@
 
 #printing date and  time
 echo $(date)
+echo  "--------------------------------------------------------------"
+# print the  working  dirrectory 
 echo $(pwd)
+echo  "--------------------------------------------------------------"
+#cmd  with some option  shell style 
+ls -al
+echo  "--------------------------------------------------------------"
+echo  $(ls -al)
