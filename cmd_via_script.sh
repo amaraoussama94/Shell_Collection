@@ -18,3 +18,6 @@ ls -al | grep .sh
 echo  "--------------------------------------------------------------"
 echo  $(ls -al | grep .sh)
 echo  "--------------------------------------------------------------"
+# redirection to file  and also redirection of error to file 
+echo  $(ls -al | grep .sh) > Result.txt 
+echo  $(ls -al | grep .sh) 2> Error.txt # redirection des errors veers un file 
